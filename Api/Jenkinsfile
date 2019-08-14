@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'GIT_HTTPS_PATH', defaultValue: 'https://github.com/tavisca-rtiwari/Web-Api.git')
+        string(name: 'TEST_PROJECT_PATH', defaultValue: 'Api/TestController/TestController.csproj')
+        string(name: 'API_SOLUTION', defaultValue: 'Api/Api.sln')
+        string(name: 'NETCORE_VERSION', defaultValue: '2.2')
+        choice(name:'choices',choices: ['Both','Build', 'Test'])
+    }
+    stages {
+        stage('Build') {
+            when{
+                expression{params.choices == 'Build' || params.choices == 'Both' }
+            }
+            steps {
+               sh ''' 
+               dotnet${NETCORE_VERSION} restore ${API_SOLUTION} --source https://api.nuget.org/v3/index.json
+               dotnet${NETCORE_VERSION} build ${API_SOLUTION} -p:Configration=release -v:n
+               '''
+               
+            }
+        }
+        stage('Test') {
+             when{
+                expression{params.choices == 'Test' || params.choices == 'Both'}
+            }
+            steps {
+              sh''' 
+              dotnet${NETCORE_VERSION} test ${TEST_PROJECT_PATH} 
+              '''
+            }
+        }
+    }
+}
