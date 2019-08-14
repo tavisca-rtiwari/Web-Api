@@ -9575,11 +9575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rtiwari\\source\\repos\\Api\\TestController\\TestController.csproj",
+      "projectUniqueName": "C:\\Users\\rtiwari\\Desktop\\Web-Api\\Api\\TestController\\TestController.csproj",
       "projectName": "TestController",
-      "projectPath": "C:\\Users\\rtiwari\\source\\repos\\Api\\TestController\\TestController.csproj",
+      "projectPath": "C:\\Users\\rtiwari\\Desktop\\Web-Api\\Api\\TestController\\TestController.csproj",
       "packagesPath": "C:\\Users\\rtiwari\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rtiwari\\source\\repos\\Api\\TestController\\obj\\",
+      "outputPath": "C:\\Users\\rtiwari\\Desktop\\Web-Api\\Api\\TestController\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9598,8 +9598,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\rtiwari\\source\\repos\\Api\\Api\\WebApplicationApi.csproj": {
-              "projectPath": "C:\\Users\\rtiwari\\source\\repos\\Api\\Api\\WebApplicationApi.csproj"
+            "C:\\Users\\rtiwari\\Desktop\\Web-Api\\Api\\Api\\WebApplicationApi.csproj": {
+              "projectPath": "C:\\Users\\rtiwari\\Desktop\\Web-Api\\Api\\Api\\WebApplicationApi.csproj"
             }
           }
         }
