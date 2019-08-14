@@ -1,12 +1,10 @@
 pipeline {
     agent any
-    environment {
-		NETCORE_VERSION = '2.2'
-	}
     parameters {
         string(name: 'GIT_HTTPS_PATH', defaultValue: 'https://github.com/tavisca-rtiwari/Web-Api.git')
         string(name: 'TEST_PROJECT_PATH', defaultValue: 'Api/TestController/TestController.csproj')
-        string(name: 'API_SOLUTION', defaultValue: 'Api/Api.sln')   
+        string(name: 'API_SOLUTION', defaultValue: 'Api/Api.sln')
+	string(name: 'NETCORE_VERSION', defaultValue: '2.2')
         choice(name:'choices',choices: ['Both','Build', 'Test'])
     }
     stages {
