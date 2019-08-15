@@ -12,7 +12,7 @@ namespace WebApplication7.Controllers
         {
             return "Something went wrong";
         }
-        [HttpGet]
+        [HttpGet("{input}")]
         public string Get(string input)
         {
             if (input.Equals("Hii"))
